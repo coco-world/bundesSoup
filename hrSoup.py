@@ -146,17 +146,17 @@ try:
                 try:
                     # Name: Das <span> mit der Klasse 'marginLeft20'
                     name = row.find_element(By.XPATH, ".//span[contains(@class, 'marginLeft20')]").text.strip()
-                except Exception as e:
+                except Exception:
                     name = ""
                 try:
                     # Sitz: Im <td> mit Klasse 'sitzSuchErgebnisse'
                     sitz = row.find_element(By.XPATH, ".//td[contains(@class, 'sitzSuchErgebnisse')]//span").text.strip()
-                except Exception as e:
+                except Exception:
                     sitz = ""
                 try:
                     # Status: Im <td> mit text-align: center (das Status-Feld)
                     status = row.find_element(By.XPATH, ".//td[contains(@style, 'text-align: center')]//span").text.strip()
-                except Exception as e:
+                except Exception:
                     status = ""
                 
                 # Falls mindestens Name vorhanden ist, speichern
